@@ -44,7 +44,7 @@ def handle_message(event):
         event.reply_token,
         ImageSendMessage(
             original_content_url= 'https://loremflickr.com/480/480/' +  event.message.text,
-            preview_image_url= 'https://loremflickr.com/480/480/' +  event.message.text
+            preview_image_url= 'https://loremflickr.com/240/240/' +  event.message.text
         ))
 
 
