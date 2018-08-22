@@ -45,7 +45,6 @@ def handle_message(event):
         event.reply_token,
         ImageSendMessage(
             original_content_url= url,
-            preview_image_url = url
         ))
 
 
