@@ -19,7 +19,7 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
-url = 'https://placeimg.com/240/240/any'
+url = 'https://loremflickr.com/240/240'
 
 @app.route("/callback", methods=['POST'])
 def callback():
