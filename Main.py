@@ -19,6 +19,7 @@ YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
+url = 'https://placeimg.com/240/240/any'
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -43,8 +44,8 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         ImageSendMessage(
-            original_content_url='https://placeimg.com/240/240/any',
-            preview_image_url='https://placeimg.com/240/240/any'
+            original_content_url= url,
+            preview_image_url = url
         ))
 
 
