@@ -42,7 +42,10 @@ def callback():
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event.message.text)
+        ImageSendMessage(
+            original_content_url= 'https://www.google.com/search?hl=jp&q=' + event.message.text + '&btnG=Google+Search&tbs=0&safe=off&tbm=isch',
+            preview_image_url= 'https://www.google.com/search?hl=jp&q=' + event.message.text + '&btnG=Google+Search&tbs=0&safe=off&tbm=isch'
+        )
         )
 
 
