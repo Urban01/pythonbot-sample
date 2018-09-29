@@ -42,10 +42,14 @@ def callback():
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
+        """
         ImageSendMessage(
             original_content_url= 'https://loremflickr.com/480/480/' +  event.message.text,
-            preview_image_url= 'https://loremflickr.com/240/240/' +  event.message.text
-        ))
+            preview_image_url= 'https://loremflickr.com/200/200/' +  event.message.text
+        )
+        """
+        TextSendMessage(text=event.message.text)
+        )
 
 
 if __name__ == "__main__":
